@@ -1,0 +1,89 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 144rem;
+}.feature-split-right-era {
+  box-sizing: border-box;
+  padding-right: 32.2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+.feature-split-right-era .media-B5p {
+  margin-right: 11.5rem;
+  box-sizing: border-box;
+  padding: 12rem 20.2rem 12rem 19.8rem;
+  width: 72rem;
+  height: 60rem;
+  background-color: #000000;
+  flex-shrink: 0;
+}
+.feature-split-right-era .media-B5p .media-object-gYN {
+  width: 100%;
+  height: 36rem;
+  background-color: #ffffff;
+  border-radius: 0.8rem;
+}
+.feature-split-right-era .content-1ae {
+  margin-top: 0.1rem;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.feature-split-right-era .content-1ae .title-MuQ {
+  margin-bottom: 4rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.407;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.feature-split-right-era .content-1ae .subtitle-VEv {
+  margin-bottom: 2.4rem;
+  max-width: 28.3rem;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.407;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  flex-shrink: 0;
+}
+.feature-split-right-era .content-1ae .button-secondary-pY6 {
+  width: 20rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.348375;
+  color: #000000; 
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+  background-color: #f2f2f2; 
+  border: solid 0.1rem #000000;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+}
+
+.feature-split-right-era .content-1ae .button-secondary-pY6:hover {
+  background-color: #666666; 
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HungryHero.com</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Roboto, sans-serif;
+    }
+
+    .find-container {
+      width: 70%;
+      height: 80vh;
+      background-color: #ffffff;
+      border-radius: 5px;
+      padding: 40px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .find-container h2 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 30px;
+      margin-top: 0;
+    }
+
+    .input-container {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .input-container label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .input-container input {
+      width: 97.5%;
+      padding: 10px;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 5px;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .find-button {
+      background-color: #000000;
+      color: #ffffff;
+      border: none;
+      width: 100%;
+      padding: 15px;
+      border-radius: 7px;
+      font-size: 18px;
+      text-align: center;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    .find-button:hover {
+      background-color: #333333;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .header img {  /*상단 그림 두 개 크기*/
+      width: 80px;
+    }
+
+    .header a { /*my page css*/
+      display: inline-block;
+      padding: 5px 10px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .findpw-link {
+      text-align: right;
+      font-size: 15px;
+      margin-top: 15px;
+      cursor: pointer; 
+      color: blue; 
+      text-decoration: underline; 
+    }
+  </style>
+</head>
+<body>
+  <div class="find-container">
+    <div class="header">
+      <img style="width:200px;" src="./assets/logop.png" alt="logo">
+    </div>
+    <h2>비밀번호 찾기</h2>
+    <form>
+      <div class="input-container">
+        <label for="id">ID</label>
+        <input type="text" id="id" placeholder="ID를 입력해주세요">
+      </div>
+      <div class="input-container">
+        <label for="studentID">학번</label>
+        <input type="text" id="studentID" placeholder="학번을 입력해주세요">
+      </div>
+      <div class="input-container">
+        <button class="find-button" type="button" onClick="findPW()">비밀번호 찾기</button>
+      </div>
+      <div class="input-container">
+        <p class="findpw-link" onClick="redirectTologin()">로그인 하기</p>
+      </div>
+    </form>
+  </div>
+  <script>
+    function findPW() {
+      var id = document.getElementById("id").value;
+      var studentID = document.getElementById("studentID").value;
+
+      if (id === "" || studentID === "") {
+        alert("ID와 학번을 모두 입력하세요!");
+        return;
+      }
+
+      // 로컬 스토리지에서 사용자 정보 가져오기
+      var users = JSON.parse(localStorage.getItem("users"));
+
+      if (users) {
+        // 입력된 ID와 학번으로 사용자 찾기
+        var foundUser = users.find(function(user) {
+          return user.id === id && user.studentId === studentID;
+        });
+
+        if (foundUser) {
+          alert("고객님의 비밀번호는 " + foundUser.password + "입니다.");
+        } else {
+          alert("입력한 정보와 일치하는 회원을 찾을 수 없습니다!");
+        }
+      } else {
+        alert("등록된 사용자가 없습니다!");
+      }
+    }
+
+    function redirectTologin() {
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

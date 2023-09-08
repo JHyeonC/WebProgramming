@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HungryHero.com</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Roboto, sans-serif;
+    }
+
+    .login-container {
+      width: 70%;
+      height: 80vh;
+      background-color: #ffffff;
+      border-radius: 5px;
+      padding: 40px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-container h2 {
+      text-align: center;
+      font-size: 24px;
+      margin-top: 20px;
+    }
+
+    .input-container {
+      margin-top: 30px;
+      text-align: left;
+    }
+
+    .input-container label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .input-container input {
+      width: 97.5%;
+      padding: 10px;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 5px;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .login-button {
+      background-color: #000000;
+      color: #ffffff;
+      border: none;
+      width: 100%;
+      padding: 15px;
+      border-radius: 7px;
+      font-size: 18px;
+      text-align: center;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    .login-button:hover {
+      background-color: #333333;
+    }
+
+    .signup-link {
+      text-align: right;
+      font-size: 15px;
+      margin-top: 15px;
+      cursor: pointer; 
+      color: blue;
+      text-decoration: underline; 
+    }
+
+    .findid-link {
+      text-align: right;
+      font-size: 15px;
+      margin-top: 15px;
+      cursor: pointer; 
+      color: blue;
+      text-decoration: underline; 
+    }
+
+    .findpw-link {
+      text-align: right;
+      font-size: 15px;
+      margin-top: 15px;
+      cursor: pointer; 
+      color: blue;
+      text-decoration: underline; 
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <img src="./assets/logop.png" alt="logo" style="width: 200px;">
+    <form>
+      <div class="input-container">
+        <label for="id">ID</label>
+        <input type="text" id="id" placeholder="ID를 입력해주세요">
+      </div>
+      <div class="input-container">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="비밀번호를 입력해주세요">
+      </div>
+      <div class="input-container">
+        <button class="login-button" type="button" onClick="login()">로그인하기</button>
+      </div>
+      <div class="input-container">
+        <p class="signup-link" onClick="redirectToJoin()">회원가입하기</p>
+      </div>
+      <div class="input-container">
+        <p class="findid-link" onClick="redirectToFindID()">ID 찾기</p>
+      </div>
+      <div class="input-container">
+        <p class="findpw-link" onClick="redirectToFindPW()">PW 찾기</p>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function login() {
+      var id = document.getElementById("id").value;
+      var password = document.getElementById("password").value;
+
+      if (id === "" || password === "") {
+        alert("아이디 혹은 비밀번호를 모두 입력하세요!");
+        return;
+      }
+
+      // 로컬 스토리지에서 사용자 정보 가져오기
+      var users = JSON.parse(localStorage.getItem("users"));
+
+      if (users) {
+        // 입력된 아이디와 비밀번호 확인
+        var foundUser = users.find(function(user) {
+          return user.id === id;
+        });
+
+        if (foundUser) {
+          if (foundUser.password === password) {
+            var result = confirm("로그인이 성공적으로 완료되었습니다!");
+
+            if (result) {
+              localStorage.setItem("isLoggedIn", "true");
+              window.location.href = "main.html";
+            }
+          } else {
+            alert("비밀번호가 올바르지 않습니다!");
+          }
+        } else {
+          var result = confirm("등록된 사용자가 없습니다. 회원가입을 진행하시려면 확인을, 아이디 재입력은 취소를 눌러주세요!");
+
+        if (result) {
+          window.location.href = "join.html";
+        }
+        }
+      }
+    }
+
+    function redirectToJoin() {
+      window.location.href = "join.html";
+    }
+
+    function redirectToFindID() {
+      window.location.href = "findID.html";
+    }
+
+    function redirectToFindPW() {
+      window.location.href = "findpw.html";
+    }
+  </script>
+</body>
+</html>

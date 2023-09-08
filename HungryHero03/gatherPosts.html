@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<style>
+  body {
+    min-height: 100vh;
+    min-width: 100%;
+    margin: 0;
+  }
+
+  html {
+    height: 100%;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .gather-post {
+    box-sizing: border-box;
+    padding: 120px 215px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+  }
+
+  .top-post {
+    margin-bottom: 64px;
+    box-sizing: border-box;
+    width: 100%; 
+    height: 595px;
+    display: flex;
+    align-items: flex-end;
+    background-color: #000000;
+    flex-shrink: 0;
+  }
+
+  .media {
+    margin-right: 140.8px;
+    width: 640px;
+    height: 595px; 
+    vertical-align: top;
+  }
+
+  .top-box {
+    margin: 120px;
+    width: 100%;
+    height: 450px;
+  }
+
+  .top-title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+    margin-left: 320px;
+    margin-top: 30px;
+    text-align: left;
+    color: #039be2;
+    font-family: Roboto, 'Source Sans Pro';
+    white-space: nowrap;
+  }
+
+  .top-content {
+    font-size: 60px;
+    font-weight: 600;
+    margin-top: 60px;
+    margin-right: 450px;
+    line-height: 120px;
+    color: #d9d9d9;
+    font-family: Roboto, 'Source Sans Pro';
+    text-align: center;
+  }
+
+  .gather-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .group-notice {
+    margin-right: 48px;
+    box-sizing: border-box;
+    padding: 93.6px 80px 80px 76.8px;
+    width: 1280px;
+    height: 100%;
+    background-color: #ffffff;
+    flex-shrink: 0;
+    background-color: rgba(174, 174, 174, 0.3);
+  }
+
+  .group-board {
+    box-sizing: border-box;
+    padding: 93.6px 80px 80px 76.8px;
+    width: 1280px;
+    height: 100%;
+    background-color: #ffffff;
+    flex-shrink: 0;
+    background-color: rgba(174, 174, 174, 0.3);
+  }
+
+  .view-notice {
+    margin-top: 5px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 43px;
+    color: black;
+    font-family: Roboto, 'Source Sans Pro';
+    white-space: nowrap;
+  }
+
+  .view-board {
+    margin-top: 5px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 43px;
+    color: black;
+    font-family: Roboto, 'Source Sans Pro';
+    white-space: nowrap;
+  }
+
+  .link-more {
+    margin: 0px 107.2px 78.4px 0px;
+    font-size: 28.8px;
+    font-weight: 400;
+    line-height: 43px;
+    color: #ffffff;
+    font-family: Roboto, 'Source Sans Pro';
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .link-notice {
+    font-size: 22.4px;
+    font-weight: 400;
+    line-height: 43px;
+    color: #000000;
+    font-family: Roboto, 'Source Sans Pro';
+    white-space: nowrap;
+  }
+
+  .link-board {
+    margin-left: 23.2px;
+    font-size: 22.4px;
+    font-weight: 400;
+    line-height: 43px;
+    color: #000000;
+    font-family: Roboto, 'Source Sans Pro';
+    white-space: nowrap;
+  }
+
+  .summary-notice {
+    padding-top: 65px;
+    margin-bottom: 86.4px;
+    max-width: 100%;
+    font-size: 28.8px;
+    font-weight: 400;
+    line-height: 43px;
+    color: #000000;
+    font-family: Roboto, 'Source Sans Pro';
+  }
+
+  .summary-board {
+    padding-top: 65px;
+    margin-bottom: 86.4px;
+    max-width: 100%;
+    font-size: 28.8px;
+    font-weight: 400;
+    line-height: 43px;
+    color: #000000;
+    font-family: Roboto, 'Source Sans Pro';
+  }
+
+  .menuBar {
+    color: #000000;
+  }
+</style>
+
+<html>
+
+<head>
+  <title>공지사항 & 게시판 모아보기</title>
+</head>
+
+<body>
+  <div class="gather-post">
+    <div class="top-post">
+      <img class="media" src="./assets/tree.jpg" />
+      <a class="link-more" onClick="location.href='post.html'">더 알아보기</a>
+      <div class="top-box">
+        <p class="top-title">이번 주 인기 글</p>
+        <p class="top-content">
+          <script>
+            var urlParams = new URLSearchParams(window.location.search);
+            var titleValue = urlParams.get('title') || ""; 
+            var currentIndex = 0;
+
+            var posts = localStorage.getItem("posts");
+            if (posts) {
+              posts = JSON.parse(posts);
+              var totalPosts = posts.length;
+              if (totalPosts > 1) {
+                function showNextTitle() {
+                  currentIndex = (currentIndex + 1) % totalPosts;
+                  document.getElementById("titleValue").textContent = posts[currentIndex].title;
+                }
+
+                document.write("<span id='titleValue'>" + titleValue + "</span>");
+
+                setInterval(showNextTitle, 2500);
+              } else {
+                document.write(titleValue);
+              }
+            }
+          </script>
+        </p>
+      </div>
+    </div>
+    <div class="menuBar">
+    </div>
+
+    <div class="gather-box">
+      <div class="group-notice">
+        <p class="view-notice">공지사항 모아보기</p>
+        <p class="summary-notice">
+          ▶ 어린이날(5/5) 학생 식당 운영하지 않습니다 이용에 참고 바랍니다. </br>
+          ▶ 식단 영양 성분은 공지사항 내 영양 성분 알림을 확인해 주시길 바랍니다. </br>
+          ▶ 학생 식당 내부 공사로 인하여 방학 기간 휴업합니다. </br>
+        </p>
+        <a class="link-notice" onClick="location.href='post.html'">Read More</a>
+      </div>
+      <div class="group-board">
+        <p class="view-board">게시판 모아보기</p>
+        <p class="summary-board">
+          ▶ HungryHero 서비스를 추천합니다. 덕분에 점심식사를 편하게 할 수 있었어요. </br>
+          ▶ 학생 식당 음식이 너무 맛있어요. 다만 음식 종류가 더 늘어났으면 좋겠어요. </br>
+          ▶ 방학 기간에도 학생 식당 운영하는지 질문합니다. </br> 
+        </p>
+        <a class="link-board" onClick="location.href='board.html'">Read More</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

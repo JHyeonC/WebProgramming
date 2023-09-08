@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HungryHero.com</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    h2 {
+      text-align: right; /*h2 말고 이름 변경 후 버튼 이미지로 만들기*/
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      height: 700px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 10px;
+    }
+
+    td {
+      text-align: center;
+      vertical-align: top;
+      padding: 20px;
+    }
+
+    .weekend {
+      background-color: #f9f9f9;
+    }
+
+    .menu {
+      font-weight: bold;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .button-container button {
+      margin: 0 50px; /*버튼 간격*/
+      width: 50px; 
+      height: 30px;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .button-container button img {
+      width: 100%;
+      height: 100%;
+    }
+
+  </style>
+  <script>
+    
+  </script>
+</head>
+<body>
+  <h1><img src="1.jpg" alt="Logo" width="100px"> HungryHero.com 월간 시간표</h1>
+  <h2><img src = "tkfka.png" alt = "알 수 없음" width="100p"></h2>
+
+  <div class="button-container">
+    <button onclick="previousMonth()"><img src="다운로드1.png" alt="Previous Month" width="30px"></button>
+    <button onclick="nextMonth()"><img src="다운로드.png" alt="Next Month" width="30px"></button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Sun</th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="weekend"></td>
+        <td class="weekend"></td>
+       <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td>14</td>
+        <td>15</td>
+        <td>16</td>
+        <td>17</td>
+        <td>18</td>
+        <td>19</td>
+      </tr>
+      <tr>
+        <td>20</td>
+        <td>21</td>
+        <td>22</td>
+        <td>23</td>
+        <td>24</td>
+        <td>25</td>
+        <td>26</td>
+      </tr>
+      <tr>
+        <td>27</td>
+        <td>28</td>
+        <td>29</td>
+        <td>30</td>
+        <td>31</td>
+        <td class="weekend"></td>
+        <td class="weekend"></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
+

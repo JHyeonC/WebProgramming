@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HungryHero.com</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Roboto, sans-serif;
+    }
+
+    .signup-container {
+      width: 75%;
+      height: 90vh;
+      background-color: #ffffff;
+      border-radius: 5px;
+      padding: 40px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .signup-container img {
+      display: block;
+      margin: 0 auto 10px;
+      width: 200px;
+    }
+
+    .signup-container h2 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 30px;
+      margin-top: 0;
+    }
+
+    .input-container {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .input-container label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .input-container input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 15px;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .signup-button {
+      background-color: #000000;
+      color: #ffffff;
+      border: none;
+      width: 100%;
+      padding: 15px;
+      border-radius: 20px;
+      font-size: 18px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .signup-button:hover {
+      background-color: #333333;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <img src="./assets/logop.png" alt="logo">
+    <h2>회원가입</h2>
+    <form>
+      <div class="input-container">
+        <label for="name">이름</label>
+        <input type="text" id="name" placeholder="이름을 입력하세요">
+      </div>
+      <div class="input-container">
+        <label for="student-id">학번</label>
+        <input type="text" id="student-id" placeholder="학번을 입력하세요">
+      </div>
+      <div class="input-container">
+        <label for="email">이메일</label>
+        <input type="email" id="email" placeholder="이메일을 입력하세요">
+      </div>
+      <div class="input-container">
+        <label for="id">ID</label>
+        <input type="text" id="id" placeholder="ID를 입력하세요">
+      </div>
+      <div class="input-container">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="비밀번호를 입력하세요">
+      </div>
+      <button class="signup-button" type="button" onClick="register()">회원가입</button>
+    </form>
+  </div>
+
+  <script>
+    function register() {
+      var name = document.getElementById("name").value;
+      var studentId = document.getElementById("student-id").value;
+      var email = document.getElementById("email").value;
+      var id = document.getElementById("id").value;
+      var password = document.getElementById("password").value;
+      
+      if (name === "" || studentId === "" || email === "" || id === "" || password === "") {
+        alert("위의 내용을 빠짐 없이 입력해주세요!");
+        return;
+      }
+      
+      var users = JSON.parse(localStorage.getItem("users")) || [];
+
+      // 기존 사용자 정보와 학번 중복 체크
+      var isDuplicate = users.some(function(user) {
+        return user.studentId === studentId;
+      });
+
+      if (isDuplicate) {
+        alert("이미 존재하는 사용자입니다! 학번을 다시 확인해주세요!");
+        return;
+      }
+
+      // 비밀번호 유효성 검사
+      var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+      if (!passwordRegex.test(password)) {
+        alert("비밀번호는 대소문자를 포함하고, 최소 8자 이상이어야 합니다.");
+        return;
+      }
+
+      var newUser = {
+        name: name,
+        studentId: studentId,
+        email: email,
+        id: id,
+        password: password
+      };
+
+      users.push(newUser);
+      localStorage.setItem("users", JSON.stringify(users));
+
+      var result = confirm("회원가입이 완료되었습니다! 확인을 누르면 로그인 페이지로 이동합니다");
+
+      if (result) {
+        window.location.href = "login.html";
+      }
+    }
+  </script>
+</body>
+</html>

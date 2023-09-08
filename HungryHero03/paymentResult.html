@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>Feature Split Right</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A400%2C700"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C700"/>
+  <link rel="stylesheet" href="./styles/feature-split-right.css"/>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+<body>
+<div class="feature-split-right-era">
+  <div class="media-B5p">
+    <div class="media-object-gYN">
+    <div id="qrCode" class="qr-code"></div>
+    </div>
+  </div>
+  <div class="content-1ae">
+    <p class="title-MuQ">식권 구매가 성공적으로 완료 되었습니다!</p>
+    <p class="subtitle-VEv">
+    4 월 19일 <span id="titleResult"></span>코스 결제가 완료 되었습니다!
+    <br/>
+    금일 <span id="subtitleResult"></span> 사이에 사용이 가능합니다!
+    <br/>
+    즐거운 하루 되세요!
+    </p>
+    <button class="button-secondary-pY6"
+    type="button" onClick="redirectToPage()">처음 화면으로</button>
+  </div>
+</div>
+</body>
+
+<script>
+    var queryString = window.location.search;
+    var urlParams = new URLSearchParams(queryString);
+    var title = urlParams.get('title');
+    var subtitle = urlParams.get('subtitle');
+    var quantity = urlParams.get('quantity');
+
+    document.getElementById('titleResult').textContent = title;
+    document.getElementById('subtitleResult').textContent = subtitle;
+   function redirectToPage(){
+      if(quantity>0){
+        quantity = quantity-1;
+        window.location.href='main.html?quantity=' + encodeURIComponent(quantity);
+      }
+    }
+
+        // QR 코드 생성
+    var qrCodeContainer = document.getElementById("qrCode");
+    var qrcode = new QRCode(qrCodeContainer, {
+      text: "QR 코드에 표시할 데이터",
+      width: 350,
+      height: 350,
+    });
+</script>

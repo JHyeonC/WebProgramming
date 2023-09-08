@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HungryHero.com</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: column;
+            height: 100%;
+            margin: 0;
+            font-family: Roboto, sans-serif;
+        }
+
+        .body-side {
+            flex: 1;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            padding: 40px;
+        }
+
+        .body-middle {
+            flex: 8;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            padding: 40px;
+        }
+
+        .body-middle-top {
+            height: 20%;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: column;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .body-middle-top h1{
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        .body-middle-middle {
+            height: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            /* Added to center the boxes horizontally */
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .body-middle-middle-box-left {
+            flex: 1;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .body-middle-middle-box-right {
+            flex: 1;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .body-middle-middle-box-middle {
+            flex: 1;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input {
+            width: 70px;
+            text-align: center;
+            font-size: 15px;
+            border: 0;
+            border-radius: 15px;
+            outline: none;
+            padding-left: 10px;
+            background-color: rgb(233, 233, 233);
+        }
+
+        #script1 {
+            font-size: 15px;
+            width: 100%;
+            font-weight: bold;
+            color: white;
+            background-color: #555;
+        }
+
+        .Btn {
+            background: #555;
+            color: #fff;
+            width: 100px;
+            height: 40px;
+            border-radius: 5px;
+        }
+
+        .lunchMenu{
+            font-size: 20px;
+            font-weight: bold;
+            color: rgb(4, 2, 33);
+        }
+        .dinnerMenu{
+            font-size: 20px;
+            font-weight: bold;
+            color: rgb(4, 2, 33);
+        }
+        .date{
+            font-size: 40px;
+            font-weight: bold;
+            color: #555;
+            margin-top: -30px;
+        }
+        .price{
+            font-size: 15px;
+            font-weight: bold;
+            color: rgb(255, 153, 0);
+        }
+        .amount{
+            font-size: 15px;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="body-side">
+        <img src="./assets/logop.png" alt="mjuIcon" style="width: 200px;">
+    </div>
+    <div class="body-middle">
+        <div class="body-middle-top">
+            <h1>오늘의 식단</h1>
+            <div id="script1">
+                <span class="script-prefix">공지사항 ▶"
+                    <script>
+                        var urlParams = new URLSearchParams(window.location.search);
+                        var titleValue = urlParams.get('title') || "";
+                        var currentIndex = 0;
+
+                        var posts = localStorage.getItem("posts");
+                        if (posts) {
+                            posts = JSON.parse(posts);
+                            var totalPosts = posts.length;
+                            if (totalPosts > 1) {
+                                function showNextTitle() {
+                                    currentIndex = (currentIndex + 1) % totalPosts;
+                                    document.getElementById("titleValue").textContent = posts[currentIndex].title;
+                                }
+
+                                document.write("<span id='titleValue' style='font-size: 16px; font-weight: bold; color: white;;'>" + titleValue + "</span>");
+
+                                setInterval(showNextTitle, 2500);
+                            } else {
+                                document.write("<span style='font-size: 16px; font-weight: bold; color: white;'>" + titleValue + "</span>");
+                            }
+                        }
+                    </script>"
+                </span>
+            </div>
+            <p class="todayDate"></p>
+        </div>
+        <div class="body-middle-middle">
+            <div class="body-middle-middle-box-left">
+                <p class="date">06.20 (화)</p>
+                <p class="lunchMenu"><text><br>중식<br>꼬치어묵우동 &amp; 불고기주먹밥</text></p>
+                <p class="price">7000원</p>
+                <p class="amount"><text>잔여수량 : <input type="number" class="Lquantity" value="5" disabled=""></text></p><br>
+                <button type="button" class="Btn" onclick="redirectToPageL()"> 구매하기 </button>
+            </div>
+            <div class="body-middle-middle-box-right">
+                <p class="date">06.20 (화)</p>
+                <p class="dinnerMenu"><text><br>석식<br>치킨데리야끼볶음밥</text></p>
+                <p class="price">7000원</p>
+                <p class="amount"><text>잔여수량 : <input type="number" class="Dquantity" value="5" disabled=""></text></p><br>
+                <button type="button" class="Btn" onclick="redirectToPageD()"> 구매하기 </button>
+            </div>
+        </div>
+    </div>
+    <div class="body-side">
+        <img src="./assets/mypage.png" alt="My Image" style="width: 80px;">
+        <img src="./assets/calendar.png" alt="calendar Image" style="width :80px; margin-top : 500px;"
+            onclick="redirectToCalendar()">
+    </div>
+    <span class="script-prefix">
+<script>
+    function redirectToPageL() {
+        var menu = document.querySelector('.lunchMenu').textContent;
+        var price = document.querySelector('.price').textContent;
+        var quantity = document.querySelector('.Lquantity').value;
+
+        // 다른 페이지로 데이터 전달
+        if (quantity >= 1) {
+            window.location.href = 'payment.html?menu=' + encodeURIComponent(menu) + '&price=' + encodeURIComponent(price)
+                + '&Lquantity=' + encodeURIComponent(quantity);
+        }
+    }
+
+    function redirectToPageD() {
+        var menu = document.querySelector('.dinnerMenu').textContent;
+        var price = document.querySelector('.price').textContent;
+        var quantity = document.querySelector('.Dquantity').value;
+
+        // 다른 페이지로 데이터 전달
+        if (quantity >= 1) {
+            window.location.href = 'payment.html?menu=' + encodeURIComponent(menu) + '&price=' + encodeURIComponent(price)
+                + '&Dquantity=' + encodeURIComponent(quantity);
+        }
+    }
+
+    function redirectToCalendar() {
+        window.location.href = "weekSikdan.html";
+    }
+
+    window.onload = function () {
+        var urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('Lquantity')) {
+            var Lquantity = urlParams.get('Lquantity'); // 수량 값을 가져옴
+            if (Lquantity !== null) {
+                document.querySelector('.Lquantity').value = Lquantity;
+            }
+        } else {
+            var Dquantity = urlParams.get('Dquantity'); // 수량 값을 가져옴
+            if (Dquantity !== null) {
+                document.querySelector('.Dquantity').value = Dquantity;
+            }
+        }
+    }
+</script>
+</span>
+</body>
+
+</html>

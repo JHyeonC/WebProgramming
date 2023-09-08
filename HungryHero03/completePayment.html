@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  <title>HungryHero.com</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Roboto, sans-serif;
+    }
+
+    .signup-container {
+      width: 75%;
+      height: 80vh;
+      background-color: #ffffff;
+      border-radius: 5px;
+      padding: 40px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .signup-container img {
+      display: block;
+      margin: 0 auto 10px;
+      width: 100px;
+    }
+
+    .signup-container h2 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 30px;
+      margin-top: 0;
+    }
+
+    .input-container {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .input-container label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .input-container input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 15px;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .signup-button {
+      background-color: #000000;
+      color: #ffffff;
+      border: none;
+      width: 100%;
+      padding: 15px;
+      border-radius: 20px;
+      font-size: 18px;
+      text-align: center;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    .signup-button:hover {
+      background-color: #333333;
+    }
+
+    .payment-QRView {
+      text-align: center;
+      font-weight: bold;
+      font-size: 150%;
+    }
+
+    .input-text {
+      text-align: center;
+      color: #333333
+    }
+
+    .button-container {
+            display: flex;
+            justify-content: center;
+        }
+        button.button_2 {
+            border: 0;
+            outline: none;
+            font-size: 20px;
+            margin: 30px;
+            background: black;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        button.button_2:hover {
+            color: white;
+            background: rgb(72, 77, 146);
+        }
+  </style>
+</head>
+
+<body>
+  <div class="signup-container">
+    <img src="./assets/logop.png" alt="logo" style="width: 300px; margin-bottom: 150px;">
+    <div class="payment-QRView">
+      <div id="qrCode" class="qr-code"></div>
+    </div>
+    <div class="input-text" style="margin-top: 30px">
+      식권 구매가 완료되었습니다!
+    </div>
+    <div class="button-container">
+      <button class="button_2" type="button" onclick="redirectToPage()">돌아가기</button>
+    </div>
+  </div>
+
+  <script>
+    var queryString = window.location.search;
+    var urlParams = new URLSearchParams(queryString);
+    var quantity = '';
+    if(urlParams.get('Lquantity')){
+      quantity = urlParams.get('Lquantity');
+    }else{
+      quantity = urlParams.get('Dquantity');
+    }
+
+   function redirectToPage(){
+
+      if(quantity>0){
+        quantity = quantity-1;
+        if(urlParams.get('Lquantity')){
+          window.location.href='todaySikdan.html?Lquantity=' + encodeURIComponent(quantity);
+        }else{
+          window.location.href='todaySikdan.html?Dquantity=' + encodeURIComponent(quantity);
+        }
+      }
+    }
+    
+      // QR 코드 생성
+      var qrCodeContainer = document.getElementById("qrCode");
+      var qrcode = new QRCode(qrCodeContainer, {
+        text: "https://singular-centaur-c1db28.netlify.app",
+        width: 128,
+        height: 128,
+      });
+  
+      // QR 코드 인식 시 이동
+      qrCodeImage.addEventListener("click", function() {
+        window.location.href = "https://singular-centaur-c1db28.netlify.app";
+      });
+    
+  </script>
+</body>
+
+</html>

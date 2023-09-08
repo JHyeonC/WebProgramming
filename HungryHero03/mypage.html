@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HungryHero.com</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Roboto, sans-serif;
+    }
+
+.header {
+  background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 24px;
+  margin-right: 130px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.title h1{
+  text-align: center;
+}
+
+.logout-button {
+    text-align: right;
+    font-size: 18px;
+    margin-top: 15px;
+    cursor: pointer; 
+    color: black; 
+    text-decoration: underline; 
+    }
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.profile-picture {
+  width: 200px;
+  margin-right: 20px;
+}
+
+.profile-info {
+  flex-grow: 1;
+}
+
+.profile-info h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.profile-info p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.purchase-history {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.purchase-history h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.purchase-history ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.purchase-history li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+  </style>
+  <script>
+    function redirectToMain() {
+      window.location.href = "main.html";
+    }
+
+function logout() {
+  var result = confirm("로그아웃이 완료되었습니다!");
+
+  if (result) {
+    window.location.href = "main2.html";
+  } else {
+    // 취소 눌렀을 때 경우의 수?
+  }
+}
+  </script>
+</head>
+<body>
+  <div class="header">
+    <img src="./assets/logop.png" style="width:200px;" alt="logo" class="logo">
+    <h1 class="title" onClick="redirectToMain()">HungryHero.com</h1>
+    <div class="logout-button" >
+        <button class="logout-button" type = "button" onClick="logout()">로그아웃</button>
+    </div>
+  </div>
+  <div class="profile-container">
+    <img src="./assets/mypage.png" alt="profile picture" class="profile-picture">
+    <div class="profile-info">
+      <h2>최가의</h2>
+      <p>학번: 60211702</p>
+      <p>이메일: gaui02@naver.com</p>
+    </div>
+  </div>
+  <div class="purchase-history">
+    <h3>식권 구매 목록</h3>
+    <ul>
+      <li>식권 1 - 날짜: 2023-05-20</li>
+      <li>식권 2 - 날짜: 2023-05-19</li>
+      <li>식권 4 - 날짜: 2023-05-15</li>
+      <li>식권 5 - 날짜: 2023-05-13</li>
+      <li>식권 6 - 날짜: 2023-05-01</li>
+      <li>식권 7 - 날짜: 2023-04-18</li>
+      <li>식권 8 - 날짜: 2023-04-20</li>
+
+      <!-- 이거 연동해서 가능한지 확인해보기 -->
+    </ul>
+  </div>
+</body>
+</html>

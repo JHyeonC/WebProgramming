@@ -1,0 +1,337 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 144rem;
+}.group-2-5wU {
+  box-sizing: border-box;
+  padding: 6rem 6.5rem 12rem 26.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+.group-2-5wU .card-pricing-1-bQ2 {
+  margin: 19.5rem 2rem 0rem 0rem;
+  box-sizing: border-box;
+  padding: 2.9rem 5.5rem 3.3rem 5.5rem;
+  width: 27rem;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #000000;
+  background-color: #ffffff;
+  border-radius: 0.2rem;
+  flex-shrink: 0;
+}
+.group-2-5wU .card-pricing-1-bQ2 .icon-r54 {
+  margin: 0rem 5.3rem 0.9rem 5.3rem;
+  width: calc(100% - 10.6rem);
+  height: 5.4rem;
+  background-color: #000000;
+  border-radius: 2.7rem;
+  flex-shrink: 0;
+}
+.group-2-5wU .card-pricing-1-bQ2 .title-LW2 {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.group-2-5wU .card-pricing-1-bQ2 .subtitle-F7C {
+  margin-bottom: 3.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.7142857143;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.group-2-5wU .card-pricing-1-bQ2 .text-xXQ {
+  margin: 0rem 0rem 2.9rem 0.1rem;
+  max-width: 7.6rem;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.4285714286;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: Roboto, 'Source Sans Pro';
+  flex-shrink: 0;
+}
+.group-2-5wU .card-pricing-1-bQ2 .button-secondary-3ok {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.1rem #000000;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+
+.group-2-5wU .card-pricing-1-bQ2 .button-secondary-3ok:hover{
+  background-color: #666666;
+}
+
+.group-2-5wU .auto-group-pz3h-TsU {
+  margin: 3.6rem 2rem 0rem 0rem;
+  width: 33rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.group-2-5wU .auto-group-pz3h-TsU .item--NUe {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.group-2-5wU .auto-group-pz3h-TsU .item-50--FYS {
+  margin-bottom: 7.2rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.3601;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: baseline;
+  flex-shrink: 0;
+}
+.group-2-5wU .auto-group-pz3h-TsU .item-50--FYS .item-50--FYS-sub-0 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.3601;
+  color: #ff3d00;
+  font-family: Roboto, 'Source Sans Pro';
+}
+.group-2-5wU .auto-group-pz3h-TsU .item-50--FYS .item-50--FYS-sub-1 {
+}
+.group-2-5wU .auto-group-pz3h-TsU .item-50--FYS .item-50--FYS-sub-2 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.3601;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+}
+.group-2-5wU .auto-group-pz3h-TsU .item-50--FYS .item-50--FYS-sub-3 {
+}
+.group-2-5wU .auto-group-pz3h-TsU .card-pricing-1-RNN {
+  margin: 0 3rem;
+  box-sizing: border-box;
+  padding: 2.9rem 5.5rem 3.3rem 5.5rem;
+  width: calc(100% - 6rem);
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #000000;
+  background-color: #ffffff;
+  border-radius: 0.2rem;
+  flex-shrink: 0;
+}
+.group-2-5wU .auto-group-pz3h-TsU .card-pricing-1-RNN .icon-Wei {
+  margin: 0rem 5.3rem 0.9rem 5.3rem;
+  width: calc(100% - 10.6rem);
+  height: 5.4rem;
+  background-color: #000000;
+  border-radius: 2.7rem;
+  flex-shrink: 0;
+}
+.group-2-5wU .auto-group-pz3h-TsU .card-pricing-1-RNN .title-D3L {
+  margin: 0rem 0rem 0.8rem 0.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.group-2-5wU .auto-group-pz3h-TsU .card-pricing-1-RNN .subtitle-hDQ {
+  margin-bottom: 3.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.7142857143;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.group-2-5wU .auto-group-pz3h-TsU .card-pricing-1-RNN .text-Qdc {
+  margin: 0rem 0rem 2.9rem 0.1rem;
+  max-width: 7.1rem;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.4285714286;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: Roboto, 'Source Sans Pro';
+  flex-shrink: 0;
+}
+.group-2-5wU .auto-group-pz3h-TsU .card-pricing-1-RNN .button-secondary-hMp {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.1rem #000000;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.group-2-5wU .auto-group-pz3h-TsU .card-pricing-1-RNN .button-secondary-hMp:hover{
+  background-color: #666666;
+}
+.group-2-5wU .card-pricing-1-iGv {
+  margin-top: 19.5rem;
+  box-sizing: border-box;
+  padding: 2.9rem 5.25rem 3.3rem 5.35rem;
+  width: 27rem;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: solid 0.1rem #000000;
+  background-color: #ffffff;
+  border-radius: 0.2rem;
+  flex-shrink: 0;
+}
+.group-2-5wU .card-pricing-1-iGv .icon-BgJ {
+  margin: 0rem 5.55rem 0.9rem 5.45rem;
+  width: calc(100% - 11rem);
+  height: 5.4rem;
+  background-color: #000000;
+  border-radius: 2.7rem;
+  flex-shrink: 0;
+}
+.group-2-5wU .card-pricing-1-iGv .title-62a {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.group-2-5wU .card-pricing-1-iGv .subtitle-PXU {
+  margin: 0rem 0.1rem 3.4rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.7142857143;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.group-2-5wU .card-pricing-1-iGv .text-gWa {
+  margin-bottom: 6.3rem;
+  max-width: 16.4rem;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.7285714286;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: Roboto, 'Source Sans Pro';
+  flex-shrink: 0;
+}
+.group-2-5wU .card-pricing-1-iGv .button-secondary-mnv {
+  margin: 0rem 0.25rem 0rem 0.15rem;
+  width: calc(100% - 0.4rem);
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.1rem #000000;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.group-2-5wU .button-secondary-mnv:hover{
+  background-color: #666666;
+}
+.group-2-5wU .button-primary-mRY {
+  margin-bottom: 55.5rem;
+  width: 20rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #ffffff;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+  background-color: #000000;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.group-2-5wU .button-primary-mRY:hover{
+  background-color: #333333;
+}

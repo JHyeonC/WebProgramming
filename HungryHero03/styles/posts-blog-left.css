@@ -1,0 +1,276 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 144rem;
+}.posts-blog-left-8RU {
+  box-sizing: border-box;
+  padding: 8rem 13.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+.posts-blog-left-8RU .auto-group-pl5u-Fkz {
+  margin-right: 3.1rem;
+  width: 76.9rem;
+  height: 60rem;
+  position: relative;
+  flex-shrink: 0;
+}
+.posts-blog-left-8RU .auto-group-pl5u-Fkz .blog-card-feature-BPk {
+  box-sizing: border-box;
+  padding: 5.6rem 4.9557rem;
+  width: 38.2rem;
+  height: 60rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 5.6rem;
+  font-weight: 400;
+  line-height: 1.1725;
+  color: #ffffff;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+  background-color: #000000;
+}
+.posts-blog-left-8RU .auto-group-pl5u-Fkz .blog-card-image-2fG {
+  box-sizing: border-box;
+  padding: 7.5rem 4.036rem 5.987rem 4.9rem;
+  width: 70.7rem;
+  height: 36.2rem;
+  position: absolute;
+  left: 6.2rem;
+  top: 18.6rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #888888;
+}
+.posts-blog-left-8RU .auto-group-pl5u-Fkz .blog-card-image-2fG .auto-group-abxd-thU {
+  margin: 0rem 41.7rem 2.487rem 0rem;
+  box-sizing: border-box;
+  padding: 0.3rem 1.2rem 0.113rem 1.2rem;
+  width: 20.0635rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.407;
+  color: #ffffff;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+  background-color: #000000;
+  flex-shrink: 0;
+}
+.posts-blog-left-8RU .auto-group-pl5u-Fkz .blog-card-image-2fG .auto-group-89jf-7q8 {
+  margin: 0rem 0.809rem 6.471rem 0rem;
+  box-sizing: border-box;
+  padding: 1.9rem 9.208rem 0.229rem 23.247rem;
+  background-color: #000000;
+  flex-shrink: 0;
+}
+.posts-blog-left-8RU .auto-group-pl5u-Fkz .blog-card-image-2fG .auto-group-89jf-7q8 .title-Cra {
+  max-width: 28.5rem;
+  text-align: right;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.407;
+  color: #ffffff;
+  font-family: Roboto, 'Source Sans Pro';
+}
+.posts-blog-left-8RU .auto-group-pl5u-Fkz .blog-card-image-2fG .auto-group-89jf-7q8 .title-Cra .title-Cra-sub-0 {
+}
+.posts-blog-left-8RU .auto-group-pl5u-Fkz .blog-card-image-2fG .auto-group-89jf-7q8 .title-Cra .title-Cra-sub-1 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.407;
+  color: #ffffff;
+  font-family: Roboto, 'Source Sans Pro';
+}
+.posts-blog-left-8RU .auto-group-pl5u-Fkz .blog-card-image-2fG .auto-group-wjs3-N2J {
+  margin-left: 41.7rem;
+  box-sizing: border-box;
+  padding: 0.4rem 1.481rem 0.013rem 13.483rem;
+  text-align: right;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.407;
+  color: #ffffff;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+  background-color: #000000;
+  flex-shrink: 0;
+}
+.posts-blog-left-8RU .auto-group-gqv5-b9x {
+  width: 37rem;
+  height: 60rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.posts-blog-left-8RU .auto-group-gqv5-b9x .blog-card-ikN {
+  margin-bottom: 3rem;
+  width: 100%;
+  height: 28.5rem;
+  position: relative;
+  flex-shrink: 0;
+}
+.posts-blog-left-8RU .auto-group-gqv5-b9x .blog-card-ikN .title-3Xk {
+  width: 26.8rem;
+  height: 10.2rem;
+  position: absolute;
+  left: 3.4rem;
+  top: 11.7rem;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.407;
+  color: #ffffff;
+  font-family: Roboto, 'Source Sans Pro';
+}
+.posts-blog-left-8RU .auto-group-gqv5-b9x .blog-card-ikN .title-vrS {
+  width: 5.8rem;
+  height: 2rem;
+  position: absolute;
+  left: 3.4rem;
+  top: 5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.407;
+  color: #ffffff;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.posts-blog-left-8RU .auto-group-gqv5-b9x .blog-card-ikN .background-D4r {
+  width: 37rem;
+  height: 28.5rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #ffffff;
+}
+.posts-blog-left-8RU .auto-group-gqv5-b9x .blog-card-ikN .title-L9U {
+  width: 26.6rem;
+  height: 6.8rem;
+  position: absolute;
+  left: 4.8rem;
+  top: 11.6rem;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.407;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+}
+.posts-blog-left-8RU .auto-group-gqv5-b9x .blog-card-ikN .author-Qf8 {
+  width: 6.9rem;
+  height: 2.6rem;
+  position: absolute;
+  left: 22.2rem;
+  top: 20.7rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.407;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.posts-blog-left-8RU .auto-group-gqv5-b9x .blog-card-ikN .subtitle-gsY {
+  width: 4.9rem;
+  height: 2.3rem;
+  position: absolute;
+  left: 4.7rem;
+  top: 5.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.40625;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.posts-blog-left-8RU .auto-group-gqv5-b9x .blog-card-ybk {
+  width: 100%;
+  height: 28.5rem;
+  position: relative;
+  flex-shrink: 0;
+}
+.posts-blog-left-8RU .auto-group-gqv5-b9x .blog-card-ybk .title-j58 {
+  width: 26.8rem;
+  height: 10.2rem;
+  position: absolute;
+  left: 3.4rem;
+  top: 11.7rem;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.407;
+  color: #ffffff;
+  font-family: Roboto, 'Source Sans Pro';
+}
+.posts-blog-left-8RU .auto-group-gqv5-b9x .blog-card-ybk .title-24E {
+  width: 5.8rem;
+  height: 2rem;
+  position: absolute;
+  left: 3.4rem;
+  top: 5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.407;
+  color: #ffffff;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.posts-blog-left-8RU .auto-group-gqv5-b9x .blog-card-ybk .background-WVC {
+  width: 37rem;
+  height: 28.5rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #ffffff;
+}
+.posts-blog-left-8RU .auto-group-gqv5-b9x .blog-card-ybk .title-dpi {
+  width: 11.4rem;
+  height: 10.2rem;
+  position: absolute;
+  left: 6.3rem;
+  top: 8.3rem;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.407;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+}
+.posts-blog-left-8RU .auto-group-gqv5-b9x .blog-card-ybk .author-8Wa {
+  width: 6.9rem;
+  height: 2.6rem;
+  position: absolute;
+  left: 22.3rem;
+  top: 20.1rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.407;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.posts-blog-left-8RU .auto-group-gqv5-b9x .blog-card-ybk .subtitle-puC {
+  width: 3.9rem;
+  height: 2.3rem;
+  position: absolute;
+  left: 5.4rem;
+  top: 4rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.40625;
+  color: #000000;
+  font-family: Roboto, 'Source Sans Pro';
+  white-space: nowrap;
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HungryHero</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+
+/* 중간 사각형 위치 */
+.e2_292 {
+  width: 800px;
+  height: 480px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}    
+
+/* 중간 사각형 색 */
+.e2_293 {
+  background-color: rgba(255, 255, 255, 1);
+  width: 980px;
+  height: 530px;
+  position: absolute;
+  left: -60px;
+  top: -36px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 1);
+  background-image: url("./assets/tree.jpg");
+  background-repeat: no-repeat;
+  background-size: center;
+  position: absolute;
+  top: 50px; /* 조정된 위치 */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.e2_294 {
+  width: 60px;
+  height: 12px;
+  position: absolute;
+  left: 16px;
+  top: 16px;
+}
+
+.e2_295{
+  background-color: cadetblue;
+  border-radius: 500px;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  border: 1px solid rgba(0, 0, 0, 1);
+  left: 0px;
+  top: 0px;
+}
+.e2_296{
+  background-color: plum;
+  border-radius: 500px;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  border: 1px solid rgba(0, 0, 0, 1);
+  left: 24px;
+  top: 0px;
+}
+.e2_297 {   
+  border-radius: 500px;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  border: 1px solid rgba(0, 0, 0, 1);
+  left: 48px;
+  top: 0px;
+}
+
+.content {
+  background-color: #ffffff;
+  padding: 40px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tree-image {
+  position: relative;
+  width: 200px;
+  margin-right: 50px;
+}
+
+.leaf-button {
+  position: absolute;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.leaf-button:nth-child(1) {
+  top: 79%;
+  right: 35%;
+}
+
+.leaf-button:nth-child(2) {
+  top: 20%;
+  right: 10%;
+}
+
+.leaf-button:nth-child(3) {
+  bottom: 10%;
+  right: 15%;
+}
+
+.leaf-image {
+  width: 100px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  position: absolute;
+  top: -160px; /* 조정된 위치 */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.website-name {
+  font-size: 18px;
+  margin-bottom: 10px;
+  position: absolute;
+  top: -120px; /* 조정된 위치 */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.description {
+  font-size: 14px;
+  margin-bottom: 20px;
+  position: absolute;
+  top: -90px; /* 조정된 위치 */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.login-button {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #333333;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="body"></div>
+      <div class="e2_292">
+      <div class="e2_293">
+        <div class="e2_294">
+            <div class="e2_295"></div>
+            <div class="e2_296"></div>
+            <div class="e2_297"></div>
+          </div>
+      <div class="tree-container">
+        <button class="leaf-button" onClick="checkLoginAndProceed('todaySikdan.html')"><img src="./assets/leaf1.png" alt="leaf" class="leaf-image">식권 구매하기</button>
+          <button class="leaf-button" onClick="location.href='post.html'"><img src="./assets/leaf2.png" alt="leaf" class="leaf-image">공지사항보기</button>
+          <button class="leaf-button" onClick="location.href='weekSikdan2.html'"><img src="./assets/leaf3.png" alt="leaf" class="leaf-image">식단 확인하기</button>
+        </div>
+      <h1 class="title">명지대학교 식권 구매 웹사이트</h1>
+      <p class="website-name">HungryHero.com</p>
+      <p class="description">명지대학교 학색 식당 식권 구매 웹 사이트입니다! 식권 구매 및 오늘의 식단을 바로 보고 싶다면 아래 로그인 버튼을 클릭해주시고, 둘러본 뒤 식권 구매를 원하시면 아래 나뭇잎 아이콘을 클릭해주세요!</p>
+      <button class="login-button" onClick="navigateToPage('login.html')">로그인</button>
+    </div>
+  </div>
+  <script>
+  function navigateToPage(url) {
+    localStorage.setItem("purchaseUrl", url);
+    window.location.href = "error.html";
+  }
+
+  function checkLoginAndProceed(url) {
+    var isLoggedIn = localStorage.getItem("isLoggedIn");
+    if (!isLoggedIn) {
+      alert("식권 구매는 로그인 후 이용해주세요!");
+      localStorage.setItem("purchaseUrl", url);
+      window.location.href = "login.html";
+    } else {
+      
+      navigateToPage(url);
+    }
+  }
+</script>
+
+</html>

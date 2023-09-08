@@ -1,0 +1,141 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 144rem;
+}.hero-center-image-i9c {
+  padding: 1.7rem 32rem 0rem 32rem;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+
+  .content-S5c {
+    flex-shrink: 0;
+    margin: 0rem 15.55rem 2rem 14.35rem;
+    width: calc(100% - 29.9rem);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    .title-MiN {
+      font-family: Roboto, 'Source Sans Pro';
+      white-space: nowrap;
+      flex-shrink: 0;
+      margin: 0rem 0.1rem 2rem 0rem;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.1725;
+      color: #000000;
+      display: flex;
+      font-size: 4.8rem;
+      font-weight: 600;
+    }
+    .subtitle-TWW {
+      margin-bottom: 1rem;
+      align-items: center;
+      justify-content: center;
+      font-weight: 400;
+      color: #000000;
+      flex-shrink: 0;
+      max-width: 50.1rem;
+      display: flex;
+      font-size: 1.6rem;
+      line-height: 1.40625;
+      font-family: Roboto, 'Source Sans Pro';
+    }
+    .button-primary-BhQ {
+      align-items: center;
+      justify-content: center;
+      font-family: Roboto, 'Source Sans Pro';
+      flex-shrink: 0;
+      margin: 0 13.05rem;
+      height: 6rem;
+      display: flex;
+      font-weight: 400;
+      background-color: #000000;
+      width: calc(100% - 26.1rem);
+      font-size: 1.8rem;
+      line-height: 1.1725;
+      white-space: nowrap;
+      color: #ffffff;
+      border-radius: 0.5rem;
+    }
+  }
+  .auto-group-1svb-roY {
+    height: 51.7rem;
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+
+    .browser-cXp {
+      box-sizing: border-box;
+      padding: 1.6rem;
+      width: 80rem;
+      left: 0;
+      top: 0;
+      border-radius: 0.4rem;
+      height: 48rem;
+      position: absolute;
+      border: solid 0.1rem #000000;
+      background-color: #ffffff;
+
+      .group-x5t {
+        width: 6rem;
+        height: 1.2rem;
+        display: flex;
+        column-gap: 1.2rem;
+        align-items: center;
+
+        .button-tES {
+          width: 1.2rem;
+          height: 1.2rem;
+          border: solid 0.1rem #000000;
+          box-sizing: border-box;
+          border-radius: 0.6rem;
+          flex-shrink: 0;
+        }
+        .button-REN {
+          border-radius: 0.6rem;
+          flex-shrink: 0;
+          width: 1.2rem;
+          height: 1.2rem;
+          border: solid 0.1rem #000000;
+          box-sizing: border-box;
+        }
+        .button-ZLa {
+          box-sizing: border-box;
+          border-radius: 0.6rem;
+          flex-shrink: 0;
+          width: 1.2rem;
+          height: 1.2rem;
+          border: solid 0.1rem #000000;
+        }
+      }
+    }
+    .rectangle-4-rqU {
+      height: 51.5rem;
+      position: absolute;
+      left: 15.6rem;
+      top: 0.2rem;
+      object-fit: cover;
+      vertical-align: top;
+      width: 51.6rem;
+    }
+  }
+}

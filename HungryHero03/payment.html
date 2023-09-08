@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HungryHero.com</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Roboto, sans-serif;
+    }
+
+    .signup-container {
+      display: flex;
+      flex-direction: column;
+      width: 75%;
+      height: 100vh;
+      background-color: #ffffff;
+      border-radius: 5px;
+      padding: 40px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .signup-container h2 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 30px;
+      margin-top: 0;
+    }
+
+    .input-container {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .input-container label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .input-container input {
+      width: 90%;
+      padding: 10px;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 15px;
+      font-size: 16px;
+      margin-bottom: 15px;
+      margin-left: 25px;
+    }
+
+    .body-middle-up-box{
+        width: 15%;
+        height: 4vh;
+        border: 1px solid #000000; /* 태두리 스타일과 색상 지정 */
+        margin: 10px;
+        border-radius: 10px;
+    }
+
+    .signup-button {
+      background-color: #000000;
+      color: #ffffff;
+      border: none;
+      width: 100%;
+      padding: 15px;
+      border-radius: 20px;
+      font-size: 18px;
+      text-align: center;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    .signup-button:hover {
+      background-color: #333333;
+    }
+    
+    .signup-container table{
+        margin-top : 5px;
+        width: 100%;
+    }
+
+    .signup-container td{
+        padding-left: 60px;
+        font-size: 20px;
+    }
+
+    .input-container table{
+        margin-top : 20px;
+        width: 100%;
+    }
+
+    .input-container td{
+        padding-left: 60px;
+        font-size: 20px;
+    }
+    .body-middle-up-box h2, h4{
+        text-align: center;
+        font-size: 20px;
+    }
+    .name-container{
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 30px;
+        margin-top: 0;
+        border-bottom: 1px solid #000000;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <div class="name-container">
+        <img src="./assets/logop.png" alt="logo">
+        <h2>식권 결제창</h2>
+    </div>
+    <div class="input-container">
+        <div class="body-middle-up-box">
+            <h2>구매 식단 정보</h2>
+        </div>
+            <table>
+                <tr>
+                    <td>
+                        <span id="menuResult"></span>
+                    </td>
+                </tr>
+            </table>  
+    </div>
+    <div class="body-middle-up-box">
+        <h2>결제 정보</h2>
+    </div>
+    <table>
+        <tr>
+          <td>
+            <label><input type="radio" name="card" value="card"> 신용카드</label>
+          </td>
+          <td>
+            <label><input type="radio" name="kPay" value="kPay"> 카카오페이</label>
+          </td>
+          <td>
+            <label><input type="radio" name="tPay" value="tPay"> 토스페이</label>
+          </td>
+          <td>
+            <label><input type="radio" name="payco" value="payco"> 페이코</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label><input type="radio" name="nPay" value="nPay"> 네이버페이</label>
+          </td>
+          <td>
+            <label><input type="radio" name="throw" value="throw"> 계좌이체</label>
+          </td>
+          <td>
+            <label><input type="radio" name="nonPay" value="nonPay"> 무통장입금</label>
+          </td>
+          <td>
+            <label><input type="radio" name="pPay" value="pPay"> 휴대폰결제</label>
+          </td>
+        </tr>
+    </table>
+    <div class="body-middle-up-box">
+        <h2>총 금액</h2>
+    </div>
+    <table>
+        <tr>
+            <td>
+                <span id="priceResult"></span>
+            </td>
+        </tr>
+    </table>
+      <div class="input-container">
+        <div class="body-middle-up-box">
+            <h2>메모</h2>
+        </div>
+        <input type="text" id="name" placeholder="결제 메모를 입력하세요">
+        <div class="body-middle-up-box">
+            <h2>비밀번호</h2>
+        </div>
+        <input type="password" id="password" placeholder="결제 비밀번호를 입력하세요">
+      </div>
+    <button class="signup-button" type="button" onClick="redirectToPage()">구매하기</button>
+
+  </div>
+
+  <script>
+    var queryString = window.location.search;
+    var urlParams = new URLSearchParams(queryString);
+    var menu = urlParams.get('menu');
+    var price = urlParams.get('price');
+    if(urlParams.get('Lquantity')){
+        var quantity = urlParams.get('Lquantity');
+    }else{
+        var quantity = urlParams.get('Dquantity');
+    }
+
+    document.getElementById('menuResult').innerHTML = menu;
+    document.getElementById('priceResult').textContent = price;
+
+    function redirectToPage() {
+        if(urlParams.get('Lquantity')){
+            window.location.href = 'completePayment.html?Lquantity=' + encodeURIComponent(quantity);
+        }else{
+            window.location.href = 'completePayment.html?Dquantity=' + encodeURIComponent(quantity);
+        }
+    }
+</script>
+</body>
+</html>

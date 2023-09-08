@@ -1,0 +1,203 @@
+<!DOCTYPE html><html><head>
+  <title>HungryHero.com</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    .body-top {
+      display: flex;
+      width: 100%;
+      height: 15vh;
+      border-radius: 5px;
+    }
+    .body-top-right{
+      width:10%;
+      height: 15vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .body-top-middle{
+      width:80%;
+      height: 15vh;
+    }
+    .body-top-middle h1{
+      text-align: center;
+      margin-top: 20px;
+      font-size: 40px;
+    }
+    .body-top-left{
+      width: 10%;
+      height: 15vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    h1 {
+      text-align: center; /*h2 말고 이름 변경 후 버튼 이미지로 만들기*/
+    }
+    
+    .week {
+      visibility: hidden;
+    }
+
+    table {
+  border-collapse: collapse;
+  width: 100%;
+  height: 500px; /* 수정된 높이 값 */
+  border: 1px solid #444444;
+  font-weight: bold;
+}
+
+
+    th {
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 10px;
+      border: 1px solid #444444;
+      width: 20%;
+    }
+
+    td {
+      text-align: center;
+      vertical-align: top;
+      padding: 20px;
+      border: 1px solid #444444;
+    }
+
+    .weekend {
+      background-color: #f9f9f9;
+    }
+
+    .menu {
+      font-weight: bold;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .button-container button {
+      margin: 0 50px; /*버튼 간격*/
+      width: 50px; 
+      height: 30px;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .button-container button img {
+      width: 100%;
+      height: 100%;
+    }
+
+  </style>
+</head>
+<body>
+  <script src="parse.js"></script>
+  <div class="body-top">
+    <div class="body-top-left">
+        <img onclick="navigateToPage('main.html')" src="./assets/logop.png" alt="mjuIcon" style="width: 200px; margin-bottom: 10px; margin-left: 100px">
+    </div>
+    <div class="body-top-middle">
+        <h1>주간 식단표</h1>
+    </div>
+    <div class="body-top-right">
+        <img onclick="navigateToPage('mypage.html')" src="./assets/mypage.png" alt="My Image" style="width: 80px;">
+    </div>
+  </div>
+
+  <div class="button-container">
+    <div class="week">2</div>
+    <button onclick="navigateToPage('weekSikdan1.html')"><img src="./assets/PL.png" alt="Previous Month" width="30px"></button>
+    <button onclick="navigateToPage('last')"><img src="./assets/PR.png" alt="Next Month" width="30px"></button>
+  </div>
+  
+  <script>    
+    function navigateToPage(url) {
+      if(url == 'last'){
+        alert('마지막 페이지입니다.')
+      }else{
+        window.location.href = url;
+      }
+  }
+</script>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+      </tr>
+    </thead>
+    <tbody><tr><td>06.19  (월)<br><br>중식<br><br>고추장제육덮밥</td><td>06.20  (화)<br><br>중식<br><br>꼬치어묵우동 &amp; 불고기주먹밥</td><td>06.21  (수)<br><br>중식<br><br>돈까스카레덮밥</td><td>06.22  (목)<br><br>중식<br><br>해물로제파스타</td><td>06.23  (금)<br><br>중식<br><br>매콤떡볶이&amp;튀김3종</td></tr><tr><td>06.19  (월)<br><br></td><td>06.20  (화)<br><br></td><td>06.21  (수)<br><br></td><td>06.22  (목)<br><br></td><td>06.23  (금)<br><br></td></tr></tbody>
+  </table>
+  <script>
+    // 요일별 중식과 석식 값을 가져오는 함수
+    function getMealValuesByDay(dayIndex) {
+      // 중식과 석식 값을 담을 배열
+      const meals = {
+        lunch: '',
+        dinner: ''
+      };
+    
+      // 요일에 해당하는 <td> 요소를 가져옴
+      const lunchCell = document.querySelector(`tbody tr:nth-child(1) td:nth-child(${dayIndex})`);
+      const dinnerCell = document.querySelector(`tbody tr:nth-child(2) td:nth-child(${dayIndex})`);
+    
+      // 중식 값 가져오기
+      meals.lunch = lunchCell.innerHTML.trim().split('<br>').slice(2).join('\n');
+    
+      // 석식 값 가져오기
+      meals.dinner = dinnerCell.innerHTML.trim().split('<br>').slice(1).join('\n');
+    
+      return meals;
+    }
+    
+    // 월요일 중식과 석식 값 가져오기
+    const mondayMeals = getMealValuesByDay(1);
+    console.log("월요일 중식:");
+    console.log(mondayMeals.lunch);
+    console.log("월요일 석식:");
+    console.log(mondayMeals.dinner);
+    
+    // 화요일 중식과 석식 값 가져오기
+    const tuesdayMeals = getMealValuesByDay(2);
+    console.log("화요일 중식:");
+    console.log(tuesdayMeals.lunch);
+    console.log("화요일 석식:");
+    console.log(tuesdayMeals.dinner);
+    
+    // 수요일 중식과 석식 값 가져오기
+    const wednesdayMeals = getMealValuesByDay(3);
+    console.log("수요일 중식:");
+    console.log(wednesdayMeals.lunch);
+    console.log("수요일 석식:");
+    console.log(wednesdayMeals.dinner);
+    
+    // 목요일 중식과 석식 값 가져오기
+    const thursdayMeals = getMealValuesByDay(4);
+    console.log("목요일 중식:");
+    console.log(thursdayMeals.lunch);
+    console.log("목요일 석식:");
+    console.log(thursdayMeals.dinner);
+    
+    // 금요일 중식과 석식 값 가져오기
+    const fridayMeals = getMealValuesByDay(5);
+    console.log("금요일 중식:");
+    console.log(fridayMeals.lunch);
+    console.log("금요일 석식:");
+    console.log(fridayMeals.dinner);
+    </script>
+
+</body></html>
